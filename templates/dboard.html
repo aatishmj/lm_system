@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome to Your Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: linear-gradient(to right, #2ED8B6, #59A5D8);
+    }
+
+    .dashboard-container {
+      border: 2px solid #000;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-image: linear-gradient(to right, #2ED8B6, #59A5D8);
+      width: 300px;
+      max-width: 100%;
+      padding: 20px;
+      animation: slideUp 0.5s ease-in-out;
+    }
+
+    /* Rest of the CSS styles remain unchanged */
+
+    /* ... CSS styles ... */
+
+    /* Additional CSS for modifying the appearance */
+    .dashboard-container {
+      color: black;
+    }
+
+    .query-container label {
+      font-weight: bold;
+    }
+
+    .query-input {
+      width: 100%;
+      padding: 6px; /* Shorten the height of the input boxes */
+      font-size: 16px;
+      border: 1px solid black; /* Black outline border */
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    /* Override the background color for input fields */
+    .query-input,
+    .submit-button {
+      background-color: #fff;
+    }
+
+    /* Style the submit button */
+    .submit-button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-image: linear-gradient(to right, #2ED8B6, #59A5D8);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      font-weight: bold; /* Highlight the submit button */
+    }
+
+    .submit-button:hover {
+      background-image: linear-gradient(to right, #2ED8B6, #59A5D8);
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="welcome-message">Welcome to Your Dashboard!</div>
+    <div class="dashboard-content">
+      <!-- Your dashboard content goes here -->
+
+      <div class="query-container">
+        <label for="name">Name</label>
+        <input type="text" id="name" class="query-input" placeholder="Enter your name">
+
+        <label for="roll">Roll Number</label>
+        <input type="text" id="roll" class="query-input" placeholder="Enter your roll number">
+
+        <label for="pc">PC Number</label>
+        <input type="text" id="pc" class="query-input" placeholder="Enter your PC number">
+
+        <label for="query">Query or Complaint</label>
+        <textarea id="query" class="query-input" placeholder="Enter your query or complaint"></textarea>
+
+        <button class="submit-button">Submit</button>
+      </div>
+    </div>
+    <a href="login" class="logout-link">Logout</a>
+  </div>
+</body>
+</html>
