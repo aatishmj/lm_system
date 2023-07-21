@@ -33,11 +33,9 @@ def sign_up(request):
         return render(request,'sign.html')
 
 def dboard(request):
-    if request.user.is_authenticated:
+    if request.user.isanonymous:
         return render(request , "dboard.html")
-
-    else:
-        return render(request , "s_log.html")
+    return redirect("s_log.html")
 
 def logout_user(request):
     logout(request)
