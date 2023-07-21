@@ -138,7 +138,8 @@
 </head>
 <body>
   <div class="login-container">
-    <form>
+    <form method="post">
+      {%csrf_token%}
       <div class="form-group">
         <label for="username">Username</label>
         <input type="text" id="username" name="username" required>
