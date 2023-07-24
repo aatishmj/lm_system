@@ -75,11 +75,14 @@
   </style>
 </head>
 <body>
+  
   <div class="dashboard-container">
     <div class="welcome-message">Welcome to Your Dashboard!</div>
     <div class="dashboard-content">
       <!-- Your dashboard content goes here -->
-
+      
+      <form method="post">
+      {% csrf_token %}
       <div class="query-container">
         <label for="name">Name</label>
         <input type="text" id="name" class="query-input" placeholder="Enter your name">
@@ -92,11 +95,14 @@
 
         <label for="query">Query or Complaint</label>
         <textarea id="query" class="query-input" placeholder="Enter your query or complaint"></textarea>
+        {% include 'messages.html' %}
 
         <button class="submit-button">Submit</button>
       </div>
+    </form>
     </div>
-    <a href="student/logout" class="logout-link">Logout</a>
+    
+    <a href="../student/logout" class="logout-link">Logout</a>
   </div>
 </body>
 </html>

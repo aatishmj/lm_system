@@ -137,10 +137,10 @@
   </style>
 </head>
 <body>
-  <div class="signup-container">
-    <form method="post">
+  <div class="signup-container" >
+    <form method="post" >
       {% csrf_token %}
-      <div class="form-group">
+      <div class="form-group" >
         <label for="name">First name</label>
         <input type="text" id="name" name="name" required>
       </div>
@@ -159,9 +159,10 @@
       </div>
       <button type="submit" class="btn">Sign Up</button>
       <div class="back-to-login-container">
-        <a href="login">Back to Login</a>
+      
       </div>
     </form>
+    <a href="../student/login">Back to Login</a>
   </div>
 </body>
 </html>
