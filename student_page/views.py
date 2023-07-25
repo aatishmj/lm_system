@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import logout , login
 from django.contrib import messages
+from lab_admin.models import ticket
 
 
 
@@ -38,6 +39,13 @@ def dboard(request):
         return redirect("login")
     else:
         if request.method == 'POST':
+            name=request.POST.get('name')
+            roll_no=request.POST.get('roll')
+            pc=request.POST.get('pc')
+            problem=request.POST.get('query')
+            s_ticket=ticket(name=name ,roll_no =roll_no , pc_number=pc , problem=problem)
+            s_ticket.save()
+            
             messages.success(request, 'Your response has succesfully recorded.')
         return render(request,"dboard.html")
     

@@ -65,7 +65,7 @@ ROOT_URLCONF = 'lab_Management.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [    BASE_DIR / "templates",
+        'DIRS': [BASE_DIR / "templates",
     '/var/www/templates/',],
         'APP_DIRS': True,
         'OPTIONS': {

@@ -85,16 +85,16 @@
       {% csrf_token %}
       <div class="query-container">
         <label for="name">Name</label>
-        <input type="text" id="name" class="query-input" placeholder="Enter your name">
+        <input type="text" id="name" name="name" class="query-input" placeholder="Enter your name">
 
         <label for="roll">Roll Number</label>
-        <input type="text" id="roll" class="query-input" placeholder="Enter your roll number">
+        <input type="text" id="roll" name="roll" class="query-input" placeholder="Enter your roll number">
 
         <label for="pc">PC Number</label>
-        <input type="text" id="pc" class="query-input" placeholder="Enter your PC number">
+        <input type="text" id="pc" name="pc" class="query-input" placeholder="Enter your PC number">
 
         <label for="query">Query or Complaint</label>
-        <textarea id="query" class="query-input" placeholder="Enter your query or complaint"></textarea>
+        <textarea id="query" name="query" class="query-input" placeholder="Enter your query or complaint"></textarea>
         {% include 'messages.html' %}
 
         <button class="submit-button">Submit</button>

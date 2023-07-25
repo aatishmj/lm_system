@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Admin</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #EAF7FF, #B0E0E6);
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .welcome-message {
+            margin-top: 50px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .buttons button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            border: none;
+            background-color: #87CEFA;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-message">
+        Welcome Admin
+    </div>
+    <div class="buttons">
+        <button onclick="location.href='admindash/query'">Student Query</button>
+        <button onclick="location.href='/hardware_issue'">Hardware Issue</button>
+        <button onclick="location.href='/software_issue'">Software Issue</button>
+        <button onclick="location.href='/supplier_contact'">Supplier Contact</button>
+    </div>
+</body>
+</html>
