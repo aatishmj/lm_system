@@ -40,6 +40,8 @@
 </head>
 <body>
     <h1>Student Query</h1>
+    <form method="post">
+    {% csrf_token %}
     <ul>
         {% for ticket in tickets %}
         <li>
@@ -49,11 +51,14 @@
                 Roll No: {{ ticket.roll_no }}<br>
                 PC Number: {{ ticket.pc_number }}<br>
                 Problem: {{ ticket.problem }}
-                <input type="checkbox" class="ticket-id" name="{{ticket.id}}">
+                <input type="checkbox" class="ticket-id" name={{ ticket.id }} id = "id" >
                 <label for="vehicle1"></label><br>
             </div>
         </li>
         {% endfor %}
+        <button type="submit" class="btn">solved</button>
+
     </ul>
+</form>
 </body>
 </html>

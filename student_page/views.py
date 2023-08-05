@@ -53,3 +53,7 @@ def dboard(request):
 def logout_user(request):
     logout(request)
     return redirect("login")
+
+def updated_list() :
+    pass
+
