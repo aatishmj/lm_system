@@ -10,18 +10,14 @@ def problem(request):
         id_list=[]
         tickets = ticket.objects.all()
         last=ticket.objects.last()
-        # for ids in range(0,int(last.id)):
-        #     id=request.POST.get(str(ids))    
-        #     print(id)
-        #     if id!="" and id!=None :
-        #         id_list.append(id)
-        id=request.POST.get("id")  
-        print(id)
-        tickets = ticket.objects.all()
-        for ids in id :
+        l_id=last.id
+        for ids in range(1 , l_id+1) :
+            if request.POST.get(str(ids)) != None :
+                id=request.POST.get(str(ids))  
+                id_list.append(id)
+        for ids in id_list:
             instance = ticket.objects.get(id=ids)
-            instance.delete()
-        print(id)
+            instance.delete()    
         return render(request, 'student_query.html', {'tickets': tickets})
     tickets = ticket.objects.all()
     return render(request, 'student_query.html', {'tickets': tickets})

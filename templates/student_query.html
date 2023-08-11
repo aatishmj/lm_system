@@ -52,7 +52,7 @@
                 Roll No: {{ ticket.roll_no }}<br>
                 PC Number: {{ ticket.pc_number }}<br>
                 Problem: {{ ticket.problem }}
-                <input type="checkbox" class="ticket-id" name={{ ticket.id }} id = "id" >
+                <input type="checkbox" class="ticket-id" name={{ ticket.id }} id = {{ ticket.id }} value={{ ticket.id }} >
                 <label for="vehicle1"></label><br>
             </div>
         </li>
