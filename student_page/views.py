@@ -16,8 +16,7 @@ def login_user(request):
             login(request, user)
             return redirect("dboard")
         else:
-            return render(request ,"s_log.html") 
-
+            return render(request ,"s_log.html")
 
     return render(request ,"s_log.html")
 

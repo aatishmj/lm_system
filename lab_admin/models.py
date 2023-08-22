@@ -18,3 +18,15 @@ class ticket(models.Model) :
     roll_no= models.CharField(max_length=30)
     pc_number = models.CharField(max_length=30)
     problem= models.CharField(max_length=200)
+
+class s_ticket(models.Model) :
+    name = models.CharField(max_length=30)
+    roll_no= models.CharField(max_length=30)
+    pc_number = models.CharField(max_length=30)
+    problem= models.CharField(max_length=200)
+
+class h_ticket(models.Model) :
+    name = models.CharField(max_length=30)
+    roll_no= models.CharField(max_length=30)
+    pc_number = models.CharField(max_length=30)
+    problem= models.CharField(max_length=200)

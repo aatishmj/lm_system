@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Student Query</title>
+    <title>Hardware issue</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -52,7 +52,7 @@
 </head>
 <body>
     
-    <h1>Student Query</h1>
+    <h1>Hardware Issues</h1>
     <form method="post">
     {% csrf_token %}
     <ul>
@@ -68,8 +68,6 @@
             </div>
             <li>
                 <div class="box">Mark as solved<input type="checkbox" class="ticket-id" name={{ ticket.id }} id = {{ ticket.id }} value={{ ticket.id }} ></div>
-                <div class="Software" >Software <input type="checkbox" class="s_issue" name="s_issue" id = {{ ticket.id }} value={{ ticket.id }} ></div>
-                <div class="Hardware" >Hardware <input type="checkbox" class="h_issue" name="h_issue" id = {{ ticket.id }} value={{ ticket.id }} ></div>
             </li>
         </li>
 
