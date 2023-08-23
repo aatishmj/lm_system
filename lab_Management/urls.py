@@ -21,5 +21,5 @@ urlpatterns = [
     path("student", include("student_page.urls")),
     path("", include("student_page.urls")),
     path("admindash" , include("lab_admin.urls")),
-    path("add", include("lab_admin.urls")),
+    #path("add", include("lab_admin.urls")),
 ]
