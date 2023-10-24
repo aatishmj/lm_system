@@ -4,28 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'sign1style.css' %}">
+    <link rel="stylesheet" href="{% static 'loginstyle.css' %}">
     <title>Login and Signup</title>
 </head>
 <body>
     <div class="container">
         <div class="card">
             <div class="card_title">
-                <h1 id="formTitle">SignUp</h1>
+                <h1 id="formTitle">Login</h1>
             </div>
-            <div class="form" id="signupForm">
-              <form method="post">
-                  {% csrf_token %}
-                  <input type="text" name="name" placeholder="First Name" id="name" />
-                  <input type="text" name="surname" placeholder="Surname" id="surname" />
-                  <input type="email" name="email" placeholder="Email" id="email" />
-                  <input type="password" name="password" placeholder="Password" id="password" />
-                  <button type="submit">Sign Up</button>
-              </form>
-              <div class="card_term">
-                 <p>Already have an account? <a href="../student/login" id="formToggle">Log In</a></p>
-              </div>
-          </div>
+            <div class="form" id="loginForm">
+                <form  method="post">
+                    {% csrf_token %}
+                    <input type="username" name="username" placeholder="username" id="username"/>
+                    <input type="password" name="password" placeholder="Password" id="password"/>
+                    <button>Log In</button>
+                </form>
+                <div class="card_terms">
+                    <a href="forgot-password.html">Forgot Password?</a>
+                </div>
+
+                <div class="card_terms">
+                    <p>Don't have an account? <a href="../student/signup">Sign Up</a></p>
+                    
+                </div>
             </div>
 
         </div>  
