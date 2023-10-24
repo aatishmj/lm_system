@@ -14,9 +14,9 @@ def hello(request):
             login(request, user)
             return redirect("adminpage")
         else:
-            return render(request ,"s_log.html")
+            return render(request ,"login.html")
 
-    return render(request ,"s_log.html")
+    return render(request ,"login.html")
 
 
 def admin_dash(request) :
